@@ -1,3 +1,8 @@
+/*
+APP LAYOUT:
+- Elements that are parts of all screens are referenced on App.js, but can be created in separate files
+*/
+
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
