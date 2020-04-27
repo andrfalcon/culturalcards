@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Header, Button } from 'react-native-elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { LinearGradient } from 'expo-linear-gradient';
+// import Data from '../components/Data';
+// For now, data will be on both HomeScreen and SearchScreen
+// It's not clean code, but it's great for a first app
 
 const HomeScreen = () => {
+
+//const [cardData, generateCardData] = useState(cards_array.[0]);
+
   return (
     <View>
       <Header
         statusBarProps={{ barStyle: 'light-content' }}
-        barStyle="light-content" // or directly
+        barStyle="light-content"
         containerStyle={{
           backgroundColor: '#FF6347',
           justifyContent: 'space-around',
@@ -17,14 +22,18 @@ const HomeScreen = () => {
       >
         <Text></Text>
         <Image source={require('../assets/Clogo.png')}/>
-        <Text></Text>
+        <Text>{}</Text>
       </Header>
       <View style={styles.cardStyle}>
+        <Text></Text>
       </View>
       <View>
-        <Button title="Next Card" type="solid" buttonStyle={{
-          backgroundColor: '#FF6347',
-          width: '50%'
+        <Button title="Next Card" type="solid" onPress={() => randomCard()
+
+        }
+          buttonStyle={{
+            backgroundColor: '#FF6347',
+            width: '50%'
           }}
         />
       </View>
@@ -32,17 +41,35 @@ const HomeScreen = () => {
   )
 }
 
-// <Button title="Next Card" onPress={() => randomCard()}/>
-// <LinearGradient style={styles.gradientStyle} colors={['#fafafa', 'transparent']}/>
-// const logo = <Image source={require('../assets/Clogo.png')}/>
+var cards_array =
+    [
+      "Fumando en publico es prohibido, pero hay muchas areas publica que son designado para fumar.",
+      "Los Americanos amoran a sus mascotas, y lo tratan como parte de la familia!",
+      "Es totalmente normal que las mujeres pidan citas a las hombres!",
+      "Los estadounidenses casi siempre usan el cinturón de seguridad cuando estan manejando. Se toman muy en serio la seguridad.",
+      "Tocanda la bocina quanda estas manejanda es tomado muy en serio en los Estados Unidos.",
+      "Eructar durante las comidas se considera grosero y no se considera un cumplido para el cocinero.",
+      "Las hamburguesas, los sándwiches y la pizza se comen con las manos, en lugar de con los utensilios.",
+      "En su mayor parte, los estadounidenses no se quitan los zapatos al ingresar a un hogar.",
+      "Los estadounidenses son muy puntiagudos. Si va a llegar tarde a un evento, debe informar al anfitrión.",
+      "Las relaciones homosexuales son normales y aceptadas en muchas áreas estadounidenses.",
+      "Señalar a la gente es visto como grosero.",
+      "Las mujeres son vistas como iguales a los hombres y deben ser tratadas de manera justa.",
+      "El dinero es un tema privado entre los estadounidenses, y por lo general no hablan de sus finanzas.",
+      "Es visto como grosero escupir en público.",
+      "Se requiere dar propina a su servidor del 15% al ​​20%, pero no se necesitan propinas en los restaurantes de comida rápida o para llevar.",
+      "A los estadounidenses les gusta su espacio personal y se encuentran a 2 pies de distancia cuando hablan.",
+      "El contacto físico durante una conversación generalmente incomoda a los estadounidenses.",
+      "La mayoría de las personas se dan la mano cuando se encuentran por primera vez o en una situación formal.",
+      "Cuando las personas son buenas amigas o familiares, a veces se abrazan para decir hola, adiós o gracias.",
+      "Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios).",
+      "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'."
+    ]
 
 const randomCard = () => {
-  const cardNumber = Math.floor(Math.random() * 101);
-  return console.log(cardNumber);
-}
-
-const randomCardGenerator = () => {
-
+  const cardNumber = Math.floor(Math.random() * 22);
+  const cardData = cards_array[cardNumber];
+  return console.log(cardData)
 }
 
 const styles = StyleSheet.create({
@@ -57,15 +84,6 @@ const styles = StyleSheet.create({
       shadowColor: 'grey',
       shadowOpacity: 1,
     },
-/*
-    gradientStyle: {
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      top: 0,
-      height: '100%'
-    }
-*/
 });
 
 export default HomeScreen;
