@@ -8,7 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const HomeScreen = () => {
 
-//const [cardData, generateCardData] = useState(cards_array.[0]);
+const [cardData, generateCardText] = useState(cards_array[0]);
 
   return (
     <View>
@@ -22,15 +22,13 @@ const HomeScreen = () => {
       >
         <Text></Text>
         <Image source={require('../assets/Clogo.png')}/>
-        <Text>{}</Text>
+        <Text></Text>
       </Header>
       <View style={styles.cardStyle}>
-        <Text></Text>
+        <Text>{cardData}</Text>
       </View>
       <View>
-        <Button title="Next Card" type="solid" onPress={() => randomCard()
-
-        }
+        <Button title="Next Card" type="solid" onPress={() => generateCardText(randomCard())}
           buttonStyle={{
             backgroundColor: '#FF6347',
             width: '50%'
@@ -67,9 +65,9 @@ var cards_array =
     ]
 
 const randomCard = () => {
-  const cardNumber = Math.floor(Math.random() * 22);
+  const cardNumber = Math.floor(Math.random() * 21);
   const cardData = cards_array[cardNumber];
-  return console.log(cardData)
+  return cardData
 }
 
 const styles = StyleSheet.create({
