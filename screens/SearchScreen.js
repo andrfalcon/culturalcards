@@ -20,177 +20,161 @@ const SearchScreen = () => {
           <Image source={require('../assets/Clogo.png')}/>
           <Text></Text>
         </Header>
-      <View>
-      </View>
-      <View>
+        <View>
         <ScrollView>
           <ListItem
             title='Card #1'
             subtitle={
-              <Text>{cards_array[0]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #2'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[1]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #3'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[2]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #4'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[3]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #5'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[4]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #6'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[5]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #7'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[6]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #8'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[7]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #9'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[8]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #10'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[9]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #11'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[10]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #12'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[11]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #13'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[12]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #14'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[13]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #15'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[14]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #16'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[15]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #17'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[16]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #18'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[17]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #19'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[18]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #20'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[19]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
           />
           <ListItem
-            title='Card #21'
+            title='Card #1'
             subtitle={
-              <Text>{cards_array[20]}</Text>
+              <Text>5 months ago</Text>
             }
             leftAvatar={{ source: require('../assets/Clogo.png') }}
-            bottomDivider
+          />
+          <ListItem
+            title='Card #1'
+            subtitle={
+              <Text>5 months ago</Text>
+            }
+            leftAvatar={{ source: require('../assets/Clogo.png') }}
           />
           </ScrollView>
         </View>
