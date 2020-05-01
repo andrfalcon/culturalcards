@@ -92,6 +92,18 @@ render() {
   }
   return (
     <View style={{ flex: 1 }}>
+    <Header
+      statusBarProps={{ barStyle: 'light-content' }}
+      barStyle="light-content"
+      containerStyle={{
+        backgroundColor: '#FF6347',
+        justifyContent: 'space-around',
+      }}
+    >
+      <Text></Text>
+      <Image source={require('../assets/Clogo.png')}/>
+      <Text></Text>
+    </Header>
       <FlatList
         data={this.state.data}
         renderItem={({ item }) => (
@@ -109,6 +121,10 @@ render() {
   );
 }
 }
+
+const styles = StyleSheet.create({});
+
+export default SearchScreen;
 
 /*
   render() {
@@ -331,7 +347,3 @@ var cards_array =
     "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'."
   ]
 */
-
-const styles = StyleSheet.create({});
-
-export default SearchScreen;
