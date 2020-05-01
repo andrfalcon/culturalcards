@@ -1,12 +1,116 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, FlatList, ScrollView } from 'react-native';
-import { Header, List, ListItem } from 'react-native-elements';
+import { View, Text, StyleSheet, Image, FlatList, ScrollView, ActivityIndicator } from 'react-native';
+import { Header, List, ListItem, SearchBar } from 'react-native-elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Use a different icon for each ListItem which relates to the category of its information
 
-export default class SearchScreen extends Component {
+class SearchScreen extends Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      loading: false,
+      data: [],
+      error: null,
+    };
+    this.arrayholder = [];
+  }
+
+  componentDidMount() {
+    this.makeRemoteRequest();
+  }
+
+  makeRemoteRequest = () => {
+    const url = `https://randomuser.me/api/?&results=20`;
+    this.setState({ loading: true });
+
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          data: res.results,
+          error: res.error || null,
+          loading: false,
+        });
+        this.arrayholder = res.results;
+      })
+      .catch(error => {
+        this.setState({ error, loading: false });
+      });
+  };
+
+renderSeparator = () => {
+  return (
+    <View
+      style={{
+        height: 1,
+        width: '86%',
+        backgroundColor: '#CED0CE',
+        marginLeft: '14%',
+      }}
+    />
+  );
+};
+
+searchFilterFunction = text => {
+  this.setState({
+    value: text,
+  });
+
+  const newData = this.arrayholder.filter(item => {
+    const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
+    const textData = text.toUpperCase();
+
+    return itemData.indexOf(textData) > -1;
+  });
+  this.setState({
+    data: newData,
+  });
+};
+
+renderHeader = () => {
+  return (
+    <SearchBar
+      placeholder="Type Here..."
+      lightTheme
+      round
+      onChangeText={text => this.searchFilterFunction(text)}
+      autoCorrect={false}
+      value={this.state.value}
+    />
+  );
+};
+
+render() {
+  if (this.state.loading) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator />
+      </View>
+    );
+  }
+  return (
+    <View style={{ flex: 1 }}>
+      <FlatList
+        data={this.state.data}
+        renderItem={({ item }) => (
+          <ListItem
+            leftAvatar={{ source: { uri: item.picture.thumbnail } }}
+            title={`${item.name.first} ${item.name.last}`}
+            subtitle={item.email}
+          />
+        )}
+        keyExtractor={item => item.email}
+        ItemSeparatorComponent={this.renderSeparator}
+        ListHeaderComponent={this.renderHeader}
+      />
+    </View>
+  );
+}
+}
+
+/*
   render() {
     return (
       <View>
@@ -201,6 +305,7 @@ export default class SearchScreen extends Component {
   }
 }
 
+
 var cards_array =
   [
     "Fumando en publico es prohibido, pero hay muchas areas publica que son designado para fumar.",
@@ -225,6 +330,8 @@ var cards_array =
     "Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios).",
     "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'."
   ]
-
+*/
 
 const styles = StyleSheet.create({});
+
+export default SearchScreen;
