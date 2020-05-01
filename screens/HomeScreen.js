@@ -29,11 +29,19 @@ const [cardData, generateCardText] = useState(cards_array[0]);
         <Text style={styles.cardDataStyle}>{cardData}</Text>
       </View>
       </View>
-      <View>
+      <View style={styles.buttonLayoutStyle}>
         <Button title="Next Card" type="solid" onPress={() => generateCardText(randomCard())}
           buttonStyle={{
             backgroundColor: '#FF6347',
             width: '50%',
+            height: 60,
+          }}
+          titleStyle={{
+            fontFamily: 'Futura',
+          }}
+          containerStyle={{
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         />
       </View>
@@ -87,14 +95,19 @@ const styles = StyleSheet.create({
     cardDataStyle: {
       fontFamily: 'Futura',
       fontSize: 35,
+      textAlign: 'center',
       color: '#47555A',
-      paddingLeft: 20,
-      paddingRight: 20
+      paddingLeft: 27,
+      paddingRight: 27
     },
     cardLayoutStyle: {
       alignItems: 'center',
       justifyContent: 'center'
     },
+    buttonLayoutStyle: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    }
 });
 
 export default HomeScreen;
