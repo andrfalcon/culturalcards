@@ -24,9 +24,10 @@ const [cardData, generateCardText] = useState(cards_array[0]);
         <Image source={require('../assets/Clogo.png')}/>
         <Text></Text>
       </Header>
-      <View style={styles.layoutStyle}>
+      <View style={styles.cardLayoutStyle}>
       <View style={styles.cardStyle}>
         <Text style={styles.cardDataStyle}>{cardData}</Text>
+      </View>
       </View>
       <View>
         <Button title="Next Card" type="solid" onPress={() => generateCardText(randomCard())}
@@ -35,7 +36,6 @@ const [cardData, generateCardText] = useState(cards_array[0]);
             width: '50%',
           }}
         />
-      </View>
       </View>
     </View>
   )
@@ -86,13 +86,15 @@ const styles = StyleSheet.create({
     },
     cardDataStyle: {
       fontFamily: 'Futura',
-      fontSize: 40,
-      color: '#47555A'
+      fontSize: 35,
+      color: '#47555A',
+      paddingLeft: 20,
+      paddingRight: 20
     },
-    layoutStyle: {
+    cardLayoutStyle: {
       alignItems: 'center',
       justifyContent: 'center'
-    }
+    },
 });
 
 export default HomeScreen;
