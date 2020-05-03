@@ -83,6 +83,21 @@ makeRemoteRequest = () => {
     }
     return (
       <View style={{ flex: 1 }}>
+      <View>
+      <Header
+        statusBarProps={{ barStyle: 'light-content' }}
+        barStyle="light-content"
+        containerStyle={{
+          backgroundColor: '#FF6347',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Text></Text>
+        <Image source={require('../assets/Clogo.png')}/>
+        <Text></Text>
+      </Header>      
+      </View>
+      <View>
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => (
@@ -96,6 +111,7 @@ makeRemoteRequest = () => {
           ItemSeparatorComponent={this.renderSeparator}
           ListHeaderComponent={this.renderHeader}
         />
+      </View>
       </View>
     );
   }
