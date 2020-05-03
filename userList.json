@@ -1,65 +1,86 @@
 [
   {
-    "name": "Fumando en publico es prohibido, pero hay muchas areas publica que son designado para fumar.",
+    "card": "1",
+    "name": "Fumando en publico es prohibido, pero hay muchas areas publica que son designado para fumar."
   },
   {
-    "name": "Los Americanos amoran a sus mascotas, y lo tratan como parte de la familia!",
+    "card": "2",
+    "name": "Los Americanos amoran a sus mascotas, y lo tratan como parte de la familia."
   },
   {
-    "name": "Es totalmente normal que las mujeres pidan citas a las hombres!",
+    "card": "3",
+    "name": "Es totalmente normal que las mujeres pidan citas a las hombres."
   },
   {
-    "name": "Los estadounidenses casi siempre usan el cinturón de seguridad cuando estan manejando. Se toman muy en serio la seguridad.",
+    "card": "4",
+    "name": "Los estadounidenses casi siempre usan el cinturón de seguridad cuando estan manejando. Se toman muy en serio la seguridad."
   },
   {
-    "name": "Tocanda la bocina quanda estas manejanda es tomado muy en serio en los Estados Unidos.",
+    "card": "5",
+    "name": "Tocanda la bocina quanda estas manejanda es tomado muy en serio en los Estados Unidos."
   },
   {
-    "name": "Eructar durante las comidas se considera grosero y no se considera un cumplido para el cocinero.",
+    "card": "6",
+    "name": "Eructar durante las comidas se considera grosero y no se considera un cumplido para el cocinero."
   },
   {
-    "name": "Las hamburguesas, los sándwiches y la pizza se comen con las manos, en lugar de con los utensilios.",
+    "card": "7",
+    "name": "Las hamburguesas, los sándwiches y la pizza se comen con las manos, en lugar de con los utensilios."
   },
   {
-    "name": "En su mayor parte, los estadounidenses no se quitan los zapatos al ingresar a un hogar.",
+    "card": "8",
+    "name": "En su mayor parte, los estadounidenses no se quitan los zapatos al ingresar a un hogar."
   },
   {
-    "name": "Los estadounidenses son muy puntiagudos. Si va a llegar tarde a un evento, debe informar al anfitrión.",
+    "card": "9",
+    "name": "Los estadounidenses son muy puntiagudos. Si va a llegar tarde a un evento, debe informar al anfitrión."
   },
   {
-    "name": "Las relaciones homosexuales son normales y aceptadas en muchas áreas estadounidenses.",
+    "card": "10",
+    "name": "Las relaciones homosexuales son normales y aceptadas en muchas áreas estadounidenses."
   },
   {
-    "name": "Señalar a la gente es visto como grosero.",
+    "card": "11",
+    "name": "Señalar a la gente es visto como grosero."
   },
   {
-    "name": "Las mujeres son vistas como iguales a los hombres y deben ser tratadas de manera justa.",
+    "card": "12",
+    "name": "Las mujeres son vistas como iguales a los hombres y deben ser tratadas de manera justa."
   },
   {
-    "name": "El dinero es un tema privado entre los estadounidenses, y por lo general no hablan de sus finanzas.",
+    "card": "13",
+    "name": "El dinero es un tema privado entre los estadounidenses, y por lo general no hablan de sus finanzas."
   },
   {
-    "name": "Es visto como grosero escupir en público.",
+    "card": "14",
+    "name": "Es visto como grosero escupir en público."
   },
   {
-    "name": "Se requiere dar propina a su servidor del 15% al ​​20%, pero no se necesitan propinas en los restaurantes de comida rápida o para llevar.",
+    "card": "15",
+    "name": "Se requiere dar propina a su servidor del 15% al ​​20%, pero no se necesitan propinas en los restaurantes de comida rápida o para llevar."
   },
   {
-    "name": "A los estadounidenses les gusta su espacio personal y se encuentran a 2 pies de distancia cuando hablan.",
+    "card": "16",
+    "name": "A los estadounidenses les gusta su espacio personal y se encuentran a 2 pies de distancia cuando hablan."
   },
   {
-    "name": "El contacto físico durante una conversación generalmente incomoda a los estadounidenses.",
+    "card": "17",
+    "name": "El contacto físico durante una conversación generalmente incomoda a los estadounidenses."
   },
   {
-    "name": "La mayoría de las personas se dan la mano cuando se encuentran por primera vez o en una situación formal.",
+    "card": "18",
+    "name": "La mayoría de las personas se dan la mano cuando se encuentran por primera vez o en una situación formal."
   },
   {
-    "name": "Cuando las personas son buenas amigas o familiares, a veces se abrazan para decir hola, adiós o gracias.",
+    "card": "19",
+    "name": "Cuando las personas son buenas amigas o familiares, a veces se abrazan para decir hola, adiós o gracias."
   },
   {
-    "name": "Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios).",
+    "card": "20",
+    "name": "Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios)."
   },
   {
-    "name": "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'.",
-  },
+    "card": "21",
+    "name": "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'."
+  }
 ]

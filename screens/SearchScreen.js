@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, FlatList, ScrollView, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList, ScrollView, ActivityIndicator, Alert, TextInput } from 'react-native';
 import { Header, List, ListItem, SearchBar } from 'react-native-elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { SearchableFlatList } from "react-native-searchable-list";
+import Data from '../testList.json'
 
 // Use a different icon for each ListItem which relates to the category of its information
 
@@ -14,6 +16,7 @@ class SearchScreen extends Component {
       data: [],
       error: null,
     };
+
     this.arrayholder = [];
   }
 
@@ -21,111 +24,84 @@ class SearchScreen extends Component {
     this.makeRemoteRequest();
   }
 
-  makeRemoteRequest = () => {
-    const url = `https://randomuser.me/api/?&results=20`;
-    this.setState({ loading: true });
+makeRemoteRequest = () => {
+  this.setState({
+    data: Data.results,
+  });
+  this.arrayholder = Data.results;
+}
 
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          data: res.results,
-          error: res.error || null,
-          loading: false,
-        });
-        this.arrayholder = res.results;
-      })
-      .catch(error => {
-        this.setState({ error, loading: false });
-      });
+  renderSeparator = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: '86%',
+          backgroundColor: '#CED0CE',
+          marginLeft: '14%',
+        }}
+      />
+    );
   };
 
-renderSeparator = () => {
-  return (
-    <View
-      style={{
-        height: 1,
-        width: '86%',
-        backgroundColor: '#CED0CE',
-        marginLeft: '14%',
-      }}
-    />
-  );
-};
+  searchFilterFunction = text => {
+    this.setState({
+      value: text,
+    });
 
-searchFilterFunction = text => {
-  this.setState({
-    value: text,
-  });
+    const newData = this.arrayholder.filter(item => {
+      const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
+      const textData = text.toUpperCase();
 
-  const newData = this.arrayholder.filter(item => {
-    const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
-    const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+    this.setState({
+      data: newData,
+    });
+  };
 
-    return itemData.indexOf(textData) > -1;
-  });
-  this.setState({
-    data: newData,
-  });
-};
-
-renderHeader = () => {
-  return (
-    <SearchBar
-      placeholder="Type Here..."
-      lightTheme
-      round
-      onChangeText={text => this.searchFilterFunction(text)}
-      autoCorrect={false}
-      value={this.state.value}
-    />
-  );
-};
-
-render() {
-  if (this.state.loading) {
+  renderHeader = () => {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <ActivityIndicator />
+      <SearchBar
+        placeholder="Type Here..."
+        lightTheme
+        round
+        onChangeText={text => this.searchFilterFunction(text)}
+        autoCorrect={false}
+        value={this.state.value}
+      />
+    );
+  };
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <ActivityIndicator />
+        </View>
+      );
+    }
+    return (
+      <View style={{ flex: 1 }}>
+        <FlatList
+          data={this.state.data}
+          renderItem={({ item }) => (
+            <ListItem
+              leftAvatar={{ source: { uri: item.picture.thumbnail } }}
+              title={`${item.name.first} ${item.name.last}`}
+              subtitle={item.email}
+            />
+          )}
+          keyExtractor={item => item.email}
+          ItemSeparatorComponent={this.renderSeparator}
+          ListHeaderComponent={this.renderHeader}
+        />
       </View>
     );
   }
-  return (
-    <View style={{ flex: 1 }}>
-    <Header
-      statusBarProps={{ barStyle: 'light-content' }}
-      barStyle="light-content"
-      containerStyle={{
-        backgroundColor: '#FF6347',
-        justifyContent: 'space-around',
-      }}
-    >
-      <Text></Text>
-      <Image source={require('../assets/Clogo.png')}/>
-      <Text></Text>
-    </Header>
-      <FlatList
-        data={this.state.data}
-        renderItem={({ item }) => (
-          <ListItem
-            leftAvatar={{ source: { uri: item.picture.thumbnail } }}
-            title={`${item.name.first} ${item.name.last}`}
-            subtitle={item.email}
-          />
-        )}
-        keyExtractor={item => item.email}
-        ItemSeparatorComponent={this.renderSeparator}
-        ListHeaderComponent={this.renderHeader}
-      />
-    </View>
-  );
 }
-}
-
-const styles = StyleSheet.create({});
 
 export default SearchScreen;
-
 /*
   render() {
     return (
