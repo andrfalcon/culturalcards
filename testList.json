@@ -21,7 +21,7 @@
   "picture":{"thumbnail":""}},
 
   {"name":{"title":"Monsieur","first":"Card","last":"#6"},
-  "email":"Eructar durante las comidas se considera grosero y no se considera un cumplido para el cocinero.",
+  "email":"En general, los estadounidenses comen en silencio con la boca cerrada.",
   "picture":{"thumbnail":""}},
 
   {"name":{"title":"Monsieur","first":"Card","last":"#7"},
@@ -80,8 +80,44 @@
   "email":"Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios).",
   "picture":{"thumbnail":""}},
 
-  {"name":{"title":"Monsieur","first":"Card","last":"#20"},
+  {"name":{"title":"Monsieur","first":"Card","last":"#21"},
   "email":"Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#22"},
+  "email":"El tiempo es un valor estadounidense. Hay una expresión que dice: 'El tiempo es dinero'. Los estadounidenses 'ahorran' tiempo y 'pasan' el tiempo como dinero en un banco.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#23"},
+  "email":"La semana laboral en Estados Unidos es de lunes a viernes. Los sábados y domingos están separados como el fin de semana.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#24"},
+  "email":"En general, tirar basura está muy mal visto. Es visto como sucio, perezoso, irresponsable y sin cultura.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#25"},
+  "email":"Los estadounidenses pueden llamarlo por su nombre una vez que se lo presenten. Esto no se considera grosero, pero puede reflejar un estilo casual.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#26"},
+  "email":"Las sonrisas son señales básicas de cortesía, una forma no verbal de ser amigable.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#27"},
+  "email":"Enviar mensajes de texto mientras se conduce es ilegal.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#28"},
+  "email":"Beber bajo la edad de 21 años es ilegal.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#29"},
+  "email":"Es un delito servir alcohol a alguien menor de 21 años.",
+  "picture":{"thumbnail":""}},
+
+  {"name":{"title":"Monsieur","first":"Card","last":"#30"},
+  "email":"Si una mujer se viste sin modestia, no es una invitación para hombres.",
   "picture":{"thumbnail":""}},
   ]
 }
