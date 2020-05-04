@@ -84,7 +84,7 @@ var cards_array =
     ]
 
 const randomCard = () => {
-  const cardNumber = Math.floor(Math.random() * 31);
+  const cardNumber = Math.floor(Math.random() * 30);
   const cardData = cards_array[cardNumber];
   return cardData
 }
