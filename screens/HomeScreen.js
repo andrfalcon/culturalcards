@@ -71,11 +71,20 @@ var cards_array =
       "La mayoría de las personas se dan la mano cuando se encuentran por primera vez o en una situación formal.",
       "Cuando las personas son buenas amigas o familiares, a veces se abrazan para decir hola, adiós o gracias.",
       "Los besos como saludo generalmente solo se hacen entre parientes y amigos cercanos (en la mejilla) o entre amantes (en los labios).",
-      "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'."
+      "Si un estadounidense le ofrece algo, entenderá que su 'sí' significa realmente 'sí' y su 'no' significa literalmente 'no'.",
+      "El tiempo es un valor estadounidense. Hay una expresión que dice: 'El tiempo es dinero'.",
+      "La semana laboral en Estados Unidos es de lunes a viernes. Los sábados y domingos están separados como el fin de semana.",
+      "En general, tirar basura está muy mal visto. Es visto como sucio, perezoso, irresponsable y sin cultura.",
+      "Los estadounidenses pueden llamarlo por su nombre una vez que se lo presenten. Esto no se considera grosero, pero puede reflejar un estilo casual.",
+      "Las sonrisas son señales básicas de cortesía, una forma no verbal de ser amigable.",
+      "Enviar mensajes de texto mientras se conduce es ilegal.",
+      "Beber bajo la edad de 21 años es ilegal.",
+      "Es un delito servir alcohol a alguien menor de 21 años.",
+      "Si una mujer se viste sin modestia, no es una invitación para hombres.",
     ]
 
 const randomCard = () => {
-  const cardNumber = Math.floor(Math.random() * 21);
+  const cardNumber = Math.floor(Math.random() * 31);
   const cardData = cards_array[cardNumber];
   return cardData
 }
