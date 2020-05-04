@@ -95,16 +95,22 @@ makeRemoteRequest = () => {
         <Text></Text>
         <Image source={require('../assets/Clogo.png')}/>
         <Text></Text>
-      </Header>      
+      </Header>
       </View>
       <View>
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => (
             <ListItem
-              leftAvatar={{ source: { uri: item.picture.thumbnail } }}
+              //leftAvatar={{ source: { uri: item.picture.thumbnail } }}
               title={`${item.name.first} ${item.name.last}`}
               subtitle={item.email}
+              titleStyle={{
+                fontFamily: 'Futura',
+              }}
+              subtitleStyle={{
+                fontFamily: 'Avenir Next'
+              }}
             />
           )}
           keyExtractor={item => item.email}
