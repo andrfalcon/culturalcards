@@ -11,7 +11,7 @@ const HomeScreen = () => {
 const [cardData, generateCardText] = useState(cards_array[0]);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header
         statusBarProps={{ barStyle: 'light-content' }}
         barStyle="light-content"
@@ -29,22 +29,22 @@ const [cardData, generateCardText] = useState(cards_array[0]);
         <Text style={styles.cardDataStyle}>{cardData}</Text>
       </View>
       </View>
-      <View style={styles.buttonLayoutStyle}>
-        <Button title="Next Card" type="solid" onPress={() => generateCardText(randomCard())}
+        <Button title="Siguiente" type="solid" onPress={() => generateCardText(randomCard())}
           buttonStyle={{
             backgroundColor: '#FF6347',
-            width: '50%',
-            height: 60,
+            padding: 17,
           }}
           titleStyle={{
             fontFamily: 'Futura',
+            textAlign: 'center',
+            fontSize: 23,
           }}
           containerStyle={{
+            flexDirection: 'row',
             justifyContent: 'center',
-            alignItems: 'center',
+            bottom: 25
           }}
         />
-      </View>
     </View>
   )
 }
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
       height: '80%',
       width: '80%',
       backgroundColor: 'white',
-      alignItems: 'center',
+      flexDirection: 'column',
       justifyContent: 'center',
       borderRadius: 10,
       shadowOffset:{  width: 5,  height: 5  },
@@ -110,13 +110,10 @@ const styles = StyleSheet.create({
       paddingRight: 27
     },
     cardLayoutStyle: {
-      alignItems: 'center',
-      justifyContent: 'center'
-    },
-    buttonLayoutStyle: {
-      alignItems: 'center',
+      flexDirection: 'column',
       justifyContent: 'center',
-    }
+      alignItems: 'center'
+    },
 });
 
 export default HomeScreen;
